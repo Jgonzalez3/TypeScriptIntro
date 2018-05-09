@@ -12,7 +12,7 @@ export class HttpService {
     bulbasaur.subscribe(data => {
       console.log('Got Bulbasaur', data), console.log('Ability1:', data['abilities'][0]['ability']['name']);
       const newApi = this._http.get(data['abilities'][0]['ability']['url']);
-      newApi.subscribe(newdata => {console.log('All Pokemon with Chlorophyll', newdata);
+      newApi.subscribe(newdata => {console.log('All Pokemon with Chlorophyll', newdata['pokemon'].length);
       });
     });
   }

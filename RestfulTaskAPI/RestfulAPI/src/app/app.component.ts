@@ -8,11 +8,11 @@ import { HttpService } from './http.service';
 })
 export class AppComponent {
   title = 'Test';
-  constructor(private _httpService: HttpService){
-    console.log("Export APP COMPONENT HIT!!")
+  constructor(private _httpService: HttpService) {
+    console.log('Export APP COMPONENT HIT!!');
     this._httpService.getTasks();
   }
-  getTasksFromService(){
+  getTasksFromService() {
     this._httpService.getTasks();
   }
 }
